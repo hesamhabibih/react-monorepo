@@ -1,15 +1,18 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
+import { Route, Routes } from 'react-router-dom';
+import { Products } from '@react-monorepo/products';
+import { Orders } from '@react-monorepo/orders';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+// function Home() {
+//   return <h1>Home54654546</h1>;
+// }
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="react-monorepo" />
-    </StyledApp>
+    <Routes>
+      {/* <Route path="/" element={<Home />}></Route> */}
+      <Route path="/products" element={<Products />}></Route>
+      <Route path="/orders" element={<Orders />}></Route>
+    </Routes>
   );
 }
 
